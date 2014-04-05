@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.akshlu.cordova.externalurl"
+      version="0.1.0">
+
+    <name>ExternalUrl</name>
+    <description>Cordova ExternalUrl Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, external, url</keywords>
+
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/externalurl.js" name="externalurl">
+            <clobbers target="window.ExternalUrl" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="ExternalUrl">
+                <param name="ios-package" value="ExternalUrl" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ExternalUrl.h" />
+	    <source-file src="src/ios/ExternalUrl.m" />
+
+    </platform>
+
+</plugin>
