@@ -1,4 +1,4 @@
 ExternalUrl
 ===========
 
-Cordova 3 iOs plugin for open links in app or browser
+Cordova 3 iOs plugin for opening links in app or browser
